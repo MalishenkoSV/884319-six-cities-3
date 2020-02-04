@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Светлана Малишенко](https://up.htmlacademy.ru/react/3/user/884319).
-* Наставник: `Неизвестно`.
+* Наставник: `Alex Balesniy`.
 
 ---
 
