@@ -11,7 +11,7 @@ const Main = (props) => {
           <div className="header__wrapper">
             <div className="header__left">
               <a className="header__logo-link header__logo-link--active">
-                <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41"></img>
+                <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41"/>
               </a>
             </div>
             <nav className="header__nav">
@@ -86,7 +86,7 @@ const Main = (props) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
                 <select className="places__sorting-type" id="places-sorting">
-                  <option className="places__option" value="popular" selected="">Popular</option>
+                  <option className="places__option" value="popular">Popular</option>
                   <option className="places__option" value="to-high">Price: low to high</option>
                   <option className="places__option" value="to-low">Price: high to low</option>
                   <option className="places__option" value="top-rated">Top rated first</option>
@@ -99,7 +99,7 @@ const Main = (props) => {
                   </div>
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
-                      <img className="place-card__image" src="img/apartment-01.jpg" width="260" height="200" alt="Place image"></img>
+                      <img className="place-card__image" src="img/apartment-01.jpg" width="260" height="200" alt="Place image"/>
                     </a>
                   </div>
                   <div className="place-card__info">
@@ -117,7 +117,7 @@ const Main = (props) => {
                     </div>
                     <div className="place-card__rating rating">
                       <div className="place-card__stars rating__stars">
-                        <span style="width: 80%"></span>
+                        <span style={{width: 80 + `%`}}></span>
                         <span className="visually-hidden">Rating</span>
                       </div>
                     </div>
@@ -131,7 +131,7 @@ const Main = (props) => {
                 <article className="cities__place-card place-card">
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
-                      <img className="place-card__image" src="img/room.jpg" width="260" height="200" alt="Place image"></img>
+                      <img className="place-card__image" src="img/room.jpg" width="260" height="200" alt="Place image"/>
                     </a>
                   </div>
                   <div className="place-card__info">
@@ -149,7 +149,7 @@ const Main = (props) => {
                     </div>
                     <div className="place-card__rating rating">
                       <div className="place-card__stars rating__stars">
-                        <span style="width: 80%"></span>
+                        <span style={{width: 80 + `%`}}></span>
                         <span className="visually-hidden">Rating</span>
                       </div>
                     </div>
@@ -163,7 +163,7 @@ const Main = (props) => {
                 <article className="cities__place-card place-card">
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
-                      <img className="place-card__image" src="img/apartment-02.jpg" width="260" height="200" alt="Place image"></img>
+                      <img className="place-card__image" src="img/apartment-02.jpg" width="260" height="200" alt="Place image"/>
                     </a>
                   </div>
                   <div className="place-card__info">
@@ -181,7 +181,7 @@ const Main = (props) => {
                     </div>
                     <div className="place-card__rating rating">
                       <div className="place-card__stars rating__stars">
-                        <span style="width: 80%"></span>
+                        <span style={{width: 80 + `%`}}></span>
                         <span className="visually-hidden">Rating</span>
                       </div>
                     </div>
@@ -198,7 +198,7 @@ const Main = (props) => {
                   </div>
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
-                      <img className="place-card__image" src="img/apartment-03.jpg" width="260" height="200" alt="Place image"></img>
+                      <img className="place-card__image" src="img/apartment-03.jpg" width="260" height="200" alt="Place image"/>
                     </a>
                   </div>
                   <div className="place-card__info">
@@ -216,7 +216,7 @@ const Main = (props) => {
                     </div>
                     <div className="place-card__rating rating">
                       <div className="place-card__stars rating__stars">
-                        <span style="width: 100%"></span>
+                        <span style={{width: 100 % +`%`}}></span>
                         <span className="visually-hidden">Rating</span>
                       </div>
                     </div>
@@ -230,7 +230,7 @@ const Main = (props) => {
                 <article className="cities__place-card place-card">
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
-                      <img className="place-card__image" src="img/room.jpg" width="260" height="200" alt="Place image"></img>
+                      <img className="place-card__image" src="img/room.jpg" width="260" height="200" alt="Place image"/>
                     </a>
                   </div>
                   <div className="place-card__info">
@@ -248,7 +248,7 @@ const Main = (props) => {
                     </div>
                     <div className="place-card__rating rating">
                       <div className="place-card__stars rating__stars">
-                        <span style="width: 80%"></span>
+                        <span style={{width: 80 % +`%`}}></span>
                         <span className="visually-hidden">Rating</span>
                       </div>
                     </div>
@@ -270,6 +270,5 @@ const Main = (props) => {
 
   );
 };
-
 
 export default Main;
