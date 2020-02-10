@@ -1,14 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
+import {Data} from "./data/data.js";
 
-const Settings = {
-  PLACES_COUNT: 312
-};
-const OFFERS = [`Beautiful & luxurious apartment at great location`, `Wood and stone place`, `Modern apartment`, `Something cool`];
+const HEADER_BUTTON_CLICK_HANDLER = () => {};
 ReactDOM.render(
     <App
-      countPlaces={Settings.PLACES_COUNT} offers={OFFERS}
+      countPlaces={Data.COUNT_PLACES} offers={Data.OFFERS} onHeaderButtonClick={HEADER_BUTTON_CLICK_HANDLER}
     />,
     document.querySelector(`#root`)
 );
