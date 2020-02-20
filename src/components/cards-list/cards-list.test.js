@@ -46,7 +46,7 @@ const TEST_CARD_HOVER_HANDLER = () => {};
 it(`Should CardsList render correctly`, () => {
   const tree = renderer
     .create(<CardsList
-      OFFER_TEST={OFFERS_TEST}
+      offers={OFFERS_TEST}
       onCardHover={TEST_CARD_HOVER_HANDLER}
     />)
     .toJSON();

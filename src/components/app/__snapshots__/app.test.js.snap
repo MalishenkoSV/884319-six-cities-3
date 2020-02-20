@@ -200,9 +200,10 @@ exports[`Should App render correctly 1`] = `
         >
           <article
             className="cities__place-card place-card"
+            onMouseOver={[Function]}
           >
             <div
-              className="place-card__mark visually-hidden"
+              className="place-card__mark"
             >
               <span>
                 Premium
@@ -218,6 +219,7 @@ exports[`Should App render correctly 1`] = `
                   alt="Place image"
                   className="place-card__image"
                   height="200"
+                  src="img/apartment-01.jpg"
                   width="260"
                 />
               </a>
@@ -235,6 +237,7 @@ exports[`Should App render correctly 1`] = `
                     className="place-card__price-value"
                   >
                     €
+                    120
                   </b>
                   <span
                     className="place-card__price-text"
@@ -271,7 +274,7 @@ exports[`Should App render correctly 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "NaN%",
+                        "width": "40%",
                       }
                     }
                   />
@@ -287,7 +290,9 @@ exports[`Should App render correctly 1`] = `
               >
                 <a
                   href="#"
-                />
+                >
+                  Wood and stone place
+                </a>
               </h2>
               <p
                 className="place-card__type"
@@ -296,11 +301,14 @@ exports[`Should App render correctly 1`] = `
                     "textTransform": "capitalize",
                   }
                 }
-              />
+              >
+                apartment
+              </p>
             </div>
           </article>
           <article
             className="cities__place-card place-card"
+            onMouseOver={[Function]}
           >
             <div
               className="place-card__mark visually-hidden"
@@ -319,6 +327,7 @@ exports[`Should App render correctly 1`] = `
                   alt="Place image"
                   className="place-card__image"
                   height="200"
+                  src="img/apartment-02.jpg"
                   width="260"
                 />
               </a>
@@ -336,6 +345,7 @@ exports[`Should App render correctly 1`] = `
                     className="place-card__price-value"
                   >
                     €
+                    20
                   </b>
                   <span
                     className="place-card__price-text"
@@ -372,7 +382,7 @@ exports[`Should App render correctly 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "NaN%",
+                        "width": "45%",
                       }
                     }
                   />
@@ -388,7 +398,9 @@ exports[`Should App render correctly 1`] = `
               >
                 <a
                   href="#"
-                />
+                >
+                  Your perfect room
+                </a>
               </h2>
               <p
                 className="place-card__type"
@@ -397,11 +409,14 @@ exports[`Should App render correctly 1`] = `
                     "textTransform": "capitalize",
                   }
                 }
-              />
+              >
+                room
+              </p>
             </div>
           </article>
           <article
             className="cities__place-card place-card"
+            onMouseOver={[Function]}
           >
             <div
               className="place-card__mark visually-hidden"
@@ -420,6 +435,7 @@ exports[`Should App render correctly 1`] = `
                   alt="Place image"
                   className="place-card__image"
                   height="200"
+                  src="img/apartment-03.jpg"
                   width="260"
                 />
               </a>
@@ -437,6 +453,7 @@ exports[`Should App render correctly 1`] = `
                     className="place-card__price-value"
                   >
                     €
+                    220
                   </b>
                   <span
                     className="place-card__price-text"
@@ -473,7 +490,7 @@ exports[`Should App render correctly 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "NaN%",
+                        "width": "50%",
                       }
                     }
                   />
@@ -489,7 +506,9 @@ exports[`Should App render correctly 1`] = `
               >
                 <a
                   href="#"
-                />
+                >
+                  The best house ever
+                </a>
               </h2>
               <p
                 className="place-card__type"
@@ -498,14 +517,17 @@ exports[`Should App render correctly 1`] = `
                     "textTransform": "capitalize",
                   }
                 }
-              />
+              >
+                house
+              </p>
             </div>
           </article>
           <article
             className="cities__place-card place-card"
+            onMouseOver={[Function]}
           >
             <div
-              className="place-card__mark visually-hidden"
+              className="place-card__mark"
             >
               <span>
                 Premium
@@ -521,6 +543,7 @@ exports[`Should App render correctly 1`] = `
                   alt="Place image"
                   className="place-card__image"
                   height="200"
+                  src="img/apartment-01.jpg"
                   width="260"
                 />
               </a>
@@ -538,6 +561,7 @@ exports[`Should App render correctly 1`] = `
                     className="place-card__price-value"
                   >
                     €
+                    100
                   </b>
                   <span
                     className="place-card__price-text"
@@ -574,7 +598,7 @@ exports[`Should App render correctly 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "NaN%",
+                        "width": "48%",
                       }
                     }
                   />
@@ -590,7 +614,9 @@ exports[`Should App render correctly 1`] = `
               >
                 <a
                   href="#"
-                />
+                >
+                  Hotel, not hostel
+                </a>
               </h2>
               <p
                 className="place-card__type"
@@ -599,7 +625,9 @@ exports[`Should App render correctly 1`] = `
                     "textTransform": "capitalize",
                   }
                 }
-              />
+              >
+                hotel
+              </p>
             </div>
           </article>
         </div>

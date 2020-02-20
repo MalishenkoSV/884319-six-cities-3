@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
-import {offers} from "./mocks/offers";
-import {Data} from "../../data/data.js";
+import offers from "./mock/offers.js";
 
-const HEADER_BUTTON_CLICK_HANDLER = () => {};
+
+const OFFERS_COUNT = 312;
+const TEST_CARD_HOVER_HANDLER = () => {};
 ReactDOM.render(
     <App
-      countPlaces={Data.COUNT_PLACES} offers={offers} onCardHover={HEADER_BUTTON_CLICK_HANDLER}
+      countPlaces={OFFERS_COUNT} offers={offers} onCardHover={TEST_CARD_HOVER_HANDLER}
     />,
     document.querySelector(`#root`)
 );

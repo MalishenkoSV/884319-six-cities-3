@@ -1,4 +1,4 @@
-export const offers = [
+export default [
   {
     type: `apartment`,
     price: 120,
@@ -33,6 +33,6 @@ export const offers = [
     isPremium: true,
     isFavourite: false,
     rating: 4.8,
-    photoSrc: `img/apartment-01.jpg`
+    photoSrc: `img/apartment-04.jpg`
   }
 ];
