@@ -8,17 +8,24 @@ export class CardsList extends PureComponent {
     super(props);
 
     this.state = {
-      activeCard: -1
+      activeCard: null
     };
+    this._setActiveCard = this._setActiveCard.bind(this);
+  }
+  setActiveCard(id) {
+    this.setState({
+      activeCard: id
+    });
   }
   render() {
-    const {offers, onCardHover} = this.props;
+    const {offers, onHeaderButtonClick} = this.props;
 
-    return offers.map((offer, index) =>
+    return offers.map((offer) =>
       <Apartment
-        key={offer + index}
+        key={offer.id}
         offer={offer}
-        onCardHover={onCardHover}
+        onHeaderButtonClick={onHeaderButtonClick}
+        onCardHover={this._setActiveCard}
       />
     );
   }
@@ -33,5 +40,5 @@ CardsList.propTypes = {
     rating: PropTypes.number.isRequired,
     photoSrc: PropTypes.string.isRequired,
   })).isRequired,
-  onCardHover: PropTypes.func.isRequired
+  onHeaderButtonClick: PropTypes.func.isRequired,
 };

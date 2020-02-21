@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 
-export const Apartment = ({offer, onCardHover}) => {
-  const {type, price, title, isPremium, rating, photoSrc} = offer;
+export const Apartment = ({offer, onCardHover, onHeaderButtonClick}) => {
+  const {type, price, id, title, isPremium, rating, photoSrc} = offer;
   const ratingPercentage = `${rating * 10}%`;
   const premiumClass = isPremium ? `place-card__mark` : `place-card__mark visually-hidden`;
 
   return (
-    <article className="cities__place-card place-card" onMouseOver={onCardHover}>
+    <article className="cities__place-card place-card" onMouseOver={() => (onCardHover(id))}>
       <div className={premiumClass}>
         <span>Premium</span>
       </div>
@@ -36,7 +36,7 @@ export const Apartment = ({offer, onCardHover}) => {
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
-        <h2 className="place-card__name">
+        <h2 className="place-card__name" onClick={onHeaderButtonClick}>
           <a href="#">{title}</a>
         </h2>
         <p className="place-card__type" style={{textTransform: `capitalize`}}>{type}</p>
@@ -54,6 +54,8 @@ Apartment.propTypes = {
     isFavourite: PropTypes.bool.isRequired,
     rating: PropTypes.number.isRequired,
     photoSrc: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
   }).isRequired,
-  onCardHover: PropTypes.func.isRequired
+  onCardHover: PropTypes.func.isRequired,
+  onHeaderButtonClick: PropTypes.func.isRequired,
 };

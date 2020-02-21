@@ -17,17 +17,18 @@ Enzyme.configure({
   adapter: new Adapter(),
 });
 
-it(`Card should be hovered`, () => {
+it(`Card should be  clicked`, () => {
   const onCardHover = jest.fn();
-
-  const main = shallow(
+  const onHeaderButtonClick = jest.fn();
+  const placeCard = shallow(
       <Apartment
         offer={TEST_OFFER}
         onCardHover={onCardHover}
+        onHeaderButtonClick={onHeaderButtonClick}
       />
   );
-
-  main.props().onMouseOver();
-
+  const card = placeCard.find(`.place-card`);
+  card.props().onMouseOver();
+  expect(onHeaderButtonClick.mock.calls.length).toBe(1);
   expect(onCardHover.mock.calls.length).toBe(1);
 });

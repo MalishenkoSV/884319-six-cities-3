@@ -4,16 +4,17 @@ import PropTypes from "prop-types";
 
 const onCardHover = () => {};
 const App = (props) => {
-  const {countPlaces, offers} = props;
+  const {countPlaces, offers, onHeaderButtonClick} = props;
 
   return (
-    <Main countPlaces={countPlaces} offers={offers} onCardHover={onCardHover}/>
+    <Main countPlaces={countPlaces} offers={offers} onCardHover={onCardHover} onHeaderButtonClick={onHeaderButtonClick}/>
   );
 };
 
 App.propTypes = {
   countPlaces: PropTypes.number.isRequired,
   onCardHover: PropTypes.func.isRequired,
+  onHeaderButtonClick: PropTypes.func.isRequired,
   offers: PropTypes.arrayOf(PropTypes.shape({
     type: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
