@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {CardsList} from "../cards-list/cards-list.jsx";
 import CITIES from "../../mock/offers.js";
 
-const Main = ({countPlaces, offers, onCardHover}) => {
+const Main = ({countPlaces, offers, onCardHover, onHeaderButtonClick}) => {
   return <main className="page__main page__main--index">
     <h1 className="visually-hidden">Cities</h1>
     <div className="tabs">
@@ -47,7 +47,7 @@ const Main = ({countPlaces, offers, onCardHover}) => {
               <option className="places__option" value="top-rated">Top rated first</option>
             </select>
           </form>
-          <div className="cities__places-list places__list tabs__content">{<CardsList offers={offers} onCardHover={onCardHover}/>}</div>
+          <div className="cities__places-list places__list tabs__content">{<CardsList offers={offers} onHeaderButtonClick={onHeaderButtonClick} onCardHover={onCardHover}/>}</div>
         </section>
         <div className="cities__right-section">
           <section className="cities__map map"></section>
@@ -67,7 +67,8 @@ Main.propTypes = {
     rating: PropTypes.number.isRequired,
     photoSrc: PropTypes.string.isRequired,
   })).isRequired,
-  onCardHover: PropTypes.func.isRequired
+  onHeaderButtonClick: PropTypes.func.isRequired,
+  onCardHover: PropTypes.func.isRequired,
 };
 
 export default Main;

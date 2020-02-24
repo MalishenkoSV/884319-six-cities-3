@@ -42,12 +42,12 @@ export const OFFERS_TEST = [
 ];
 
 
-const TEST_CARD_HOVER_HANDLER = () => {};
+const HEADER_BUTTON_CLICK_HANDLER = () => {};
 it(`Should CardsList render correctly`, () => {
   const tree = renderer
     .create(<CardsList
       offers={OFFERS_TEST}
-      onCardHover={TEST_CARD_HOVER_HANDLER}
+      onHeaderButtonClick={HEADER_BUTTON_CLICK_HANDLER}
     />)
     .toJSON();
 

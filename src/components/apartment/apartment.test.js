@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import {Apartment} from "./apartment.jsx";
 
 export const TEST_OFFER = {
+  id: 1,
   type: `apartment`,
   price: 80,
   title: `Wood and stone place`,
@@ -12,12 +13,15 @@ export const TEST_OFFER = {
   photoSrc: `img/apartment-01.jpg`
 };
 
-const TEST_CARD_HOVER_HANDLER = () => {};
-it(`Should App render correctly`, () => {
+
+it(`Should Apartment render correctly`, () => {
+  const onCardHover = jest.fn();
+  const onHeaderButtonClick = jest.fn();
   const tree = renderer
     .create(<Apartment
       offer={TEST_OFFER}
-      onCardHover={TEST_CARD_HOVER_HANDLER}
+      onHeaderButtonClick={onHeaderButtonClick}
+      onCardHover={onCardHover}
     />)
     .toJSON();
 

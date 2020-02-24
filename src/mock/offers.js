@@ -36,4 +36,4 @@ export default [
     photoSrc: `img/apartment-04.jpg`
   }
 ];
-export const CITIES = [Paris, Cologne, Brussels, Amsterdam, Hamburg, Dusseldorf];
+export const CITIES = [`Paris`, `Cologne`, `Brussels`, `Amsterdam`, `Hamburg`, `Dusseldorf`];

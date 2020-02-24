@@ -41,14 +41,14 @@ export const TEST_OFFERS = [
     photoSrc: `img/apartment-01.jpg`
   }
 ];
-const TEST_CARD_HOVER_HANDLER = () => {};
+const TEST_HEADER_CLICK_HANDLER = () => {};
 
 it(`Should App render correctly`, () => {
   const tree = renderer
     .create(<App
       countPlaces={TEST_OFFERS_COUNT}
       offers={TEST_OFFERS}
-      onCardHover={TEST_CARD_HOVER_HANDLER}
+      onHeaderButtonClick={TEST_HEADER_CLICK_HANDLER}
     />)
     .toJSON();
 
