@@ -4,6 +4,7 @@ import {CardsList} from "./cards-list";
 
 export const OFFERS_TEST = [
   {
+    id: 1,
     type: `apartment`,
     price: 120,
     title: `Wood and stone place`,
@@ -13,6 +14,7 @@ export const OFFERS_TEST = [
     photoSrc: `img/apartment-01.jpg`
   },
   {
+    id: 2,
     type: `room`,
     price: 50,
     title: `Your perfect room`,
@@ -22,6 +24,7 @@ export const OFFERS_TEST = [
     photoSrc: `img/apartment-02.jpg`
   },
   {
+    id: 3,
     type: `house`,
     price: 220,
     title: `The best house ever`,
@@ -31,6 +34,7 @@ export const OFFERS_TEST = [
     photoSrc: `img/apartment-03.jpg`
   },
   {
+    id: 4,
     type: `hotel`,
     price: 100,
     title: `Hotel, not hostel`,

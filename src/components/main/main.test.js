@@ -6,6 +6,7 @@ import Main from "./main.jsx";
 const TEST_OFFERS_COUNT = 312;
 export const TEST_OFFERS = [
   {
+    id: 1,
     type: `apartment`,
     price: 120,
     title: `Wood and stone place`,
@@ -15,6 +16,7 @@ export const TEST_OFFERS = [
     photoSrc: `img/apartment-01.jpg`
   },
   {
+    id: 2,
     type: `room`,
     price: 20,
     title: `Your perfect room`,
@@ -24,6 +26,7 @@ export const TEST_OFFERS = [
     photoSrc: `img/apartment-02.jpg`
   },
   {
+    id: 3,
     type: `house`,
     price: 220,
     title: `The best house ever`,
@@ -33,6 +36,7 @@ export const TEST_OFFERS = [
     photoSrc: `img/apartment-03.jpg`
   },
   {
+    id: 4,
     type: `hotel`,
     price: 100,
     title: `Hotel, not hostel`,
@@ -42,13 +46,16 @@ export const TEST_OFFERS = [
     photoSrc: `img/apartment-01.jpg`
   }
 ];
-const TEST_CARD_HOVER_HANDLER = () => {};
+
 it(`Should Main render correctly`, () => {
+  const onHeaderButtonClick = jest.fn();
+  const onCardHover = jest.fn();
   const tree = renderer
     .create(<Main
       countPlaces={TEST_OFFERS_COUNT}
       offers={TEST_OFFERS}
-      onCardHover={TEST_CARD_HOVER_HANDLER}
+      onHeaderButtonClick={onHeaderButtonClick}
+      onCardHover={onCardHover}
     />)
     .toJSON();
 

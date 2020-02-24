@@ -10,7 +10,7 @@ export class CardsList extends PureComponent {
     this.state = {
       activeCard: null
     };
-    this._setActiveCard = this._setActiveCard.bind(this);
+    this.setActiveCard = this.setActiveCard.bind(this);
   }
   setActiveCard(id) {
     this.setState({
@@ -23,9 +23,10 @@ export class CardsList extends PureComponent {
     return offers.map((offer) =>
       <Apartment
         key={offer.id}
+        offers={offers}
         offer={offer}
         onHeaderButtonClick={onHeaderButtonClick}
-        onCardHover={this._setActiveCard}
+        onCardHover={this.setActiveCard}
       />
     );
   }
