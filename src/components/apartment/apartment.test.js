@@ -17,11 +17,13 @@ export const TEST_OFFER = {
 it(`Should Apartment render correctly`, () => {
   const onCardHover = jest.fn();
   const onHeaderButtonClick = jest.fn();
+  const onMouseLeave = jest.fn();
   const tree = renderer
     .create(<Apartment
       offer={TEST_OFFER}
       onHeaderButtonClick={onHeaderButtonClick}
       onCardHover={onCardHover}
+      onMouseLeave={onMouseLeave}
     />)
     .toJSON();
 

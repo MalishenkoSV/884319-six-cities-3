@@ -2,9 +2,8 @@ import React from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
-const onCardHover = () => {};
 const App = (props) => {
-  const {countPlaces, offers, cities, onHeaderButtonClick, onCityClick} = props;
+  const {countPlaces, offers, cities, onHeaderButtonClick, onCityClick, onCardHover} = props;
 
   return (
     <Main countPlaces={countPlaces} offers={offers} cities={cities} onCardHover={onCardHover} onHeaderButtonClick={onHeaderButtonClick} onCityClick={onCityClick}/>

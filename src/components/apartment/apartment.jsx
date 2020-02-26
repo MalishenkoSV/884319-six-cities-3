@@ -2,13 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 
-export const Apartment = ({offer, onCardHover, onHeaderButtonClick}) => {
+export const Apartment = ({offer, onCardHover, onHeaderButtonClick, onMouseLeave}) => {
   const {type, price, id, title, isPremium, rating, photoSrc} = offer;
   const ratingPercentage = `${rating * 10}%`;
   const premiumClass = isPremium ? `place-card__mark` : `place-card__mark visually-hidden`;
 
   return (
-    <article className="cities__place-card place-card" onMouseOver={() => (onCardHover(id))}>
+    <article className="cities__place-card place-card" onMouseEnter={onCardHover ? () => (onCardHover(id)) : () => {}} onMouseLeave={() => {
+      onMouseLeave();
+    }}>
       <div className={premiumClass}>
         <span>Premium</span>
       </div>
@@ -58,4 +60,5 @@ Apartment.propTypes = {
   }).isRequired,
   onCardHover: PropTypes.func.isRequired,
   onHeaderButtonClick: PropTypes.func.isRequired,
+  onMouseLeave: PropTypes.func.isRequired,
 };

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {CardsList} from "../cards-list/cards-list.jsx";
 import {CitiesList} from "../cities-list/cities-list.jsx";
 
-const Main = ({countPlaces, offers, cities, onCardHover, onHeaderButtonClick, onCityClick}) => {
+const Main = ({countPlaces, offers, cities, onHeaderButtonClick, onCityClick}) => {
   return <main className="page__main page__main--index">
     <h1 className="visually-hidden">Cities</h1>
     <div className="tabs">
@@ -39,7 +39,7 @@ const Main = ({countPlaces, offers, cities, onCardHover, onHeaderButtonClick, on
               <option className="places__option" value="top-rated">Top rated first</option>
             </select>
           </form>
-          <div className="cities__places-list places__list tabs__content">{<CardsList offers={offers} onHeaderButtonClick={onHeaderButtonClick} onCardHover={onCardHover}/>}</div>
+          <div className="cities__places-list places__list tabs__content"><CardsList offers={offers} onHeaderButtonClick={onHeaderButtonClick}/></div>
         </section>
         <div className="cities__right-section">
           <section className="cities__map map"></section>

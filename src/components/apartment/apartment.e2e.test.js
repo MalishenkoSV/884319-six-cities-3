@@ -13,7 +13,7 @@ export const TEST_OFFER = {
   rating: 4,
   photoSrc: `img/apartment-01.jpg`
 };
-
+const onMouseLeave = () => {};
 Enzyme.configure({
   adapter: new Adapter(),
 });
@@ -21,11 +21,14 @@ Enzyme.configure({
 it(`Card should be  clicked`, () => {
   const onCardHover = jest.fn();
   const onHeaderButtonClick = jest.fn();
+  const onMouseEnter = jest.fn();
   const placeCard = shallow(
       <Apartment
         offer={TEST_OFFER}
         onCardHover={onCardHover}
         onHeaderButtonClick={onHeaderButtonClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       />
   );
   const cardTitle = placeCard.find(`.place-card__name`);
@@ -34,20 +37,24 @@ it(`Card should be  clicked`, () => {
   expect(onHeaderButtonClick).toHaveBeenCalledTimes(1);
 
 });
+
 it(`On hover card must be card's id`, () => {
   const onCardHover = jest.fn();
   const onHeaderButtonClick = jest.fn();
-
+  const mouseEnter = jest.fn();
   const placeCard = shallow(
       <Apartment
+        id={`1`}
         offer={TEST_OFFER}
         onCardHover={onCardHover}
         onHeaderButtonClick={onHeaderButtonClick}
+        onMouseEnter={mouseEnter}
+        onMouseLeave={onMouseLeave}
       />
   );
 
   const card = placeCard.find(`.place-card`);
-  card.props().onMouseOver();
-
-  expect(onCardHover).toBeCalledWith(expect.any(Number));
+  card.simulate(`mouseEnter`);
+  expect(mouseEnter.mock.calls[0][0]).toMatchObject(TEST_OFFER.id);
+  expect(mouseEnter.mock.calls.length).toBe(1);
 });

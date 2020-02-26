@@ -27,6 +27,7 @@ export class CardsList extends PureComponent {
         offer={offer}
         onHeaderButtonClick={onHeaderButtonClick}
         onCardHover={this.setActiveCard}
+        onMouseLeave={this.setActiveCard}
       />
     );
   }

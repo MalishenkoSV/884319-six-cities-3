@@ -211,7 +211,8 @@ exports[`Should App render correctly 1`] = `
         >
           <article
             className="cities__place-card place-card"
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="place-card__mark"
@@ -320,7 +321,8 @@ exports[`Should App render correctly 1`] = `
           </article>
           <article
             className="cities__place-card place-card"
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="place-card__mark visually-hidden"
@@ -429,7 +431,8 @@ exports[`Should App render correctly 1`] = `
           </article>
           <article
             className="cities__place-card place-card"
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="place-card__mark visually-hidden"
@@ -538,7 +541,8 @@ exports[`Should App render correctly 1`] = `
           </article>
           <article
             className="cities__place-card place-card"
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="place-card__mark"

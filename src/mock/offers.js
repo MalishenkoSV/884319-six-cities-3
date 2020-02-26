@@ -1,3 +1,4 @@
+export const OFFERS_COUNT = 312;
 export const CITIES = [`Paris`, `Cologne`, `Brussels`, `Amsterdam`, `Hamburg`, `Dusseldorf`];
 
 export const offers = [
