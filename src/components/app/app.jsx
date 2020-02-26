@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 
 const onCardHover = () => {};
 const App = (props) => {
-  const {countPlaces, offers, cities, onHeaderButtonClick} = props;
+  const {countPlaces, offers, cities, onHeaderButtonClick, onCityClick} = props;
 
   return (
-    <Main countPlaces={countPlaces} offers={offers} cities={cities} onCardHover={onCardHover} onHeaderButtonClick={onHeaderButtonClick}/>
+    <Main countPlaces={countPlaces} offers={offers} cities={cities} onCardHover={onCardHover} onHeaderButtonClick={onHeaderButtonClick} onCityClick={onCityClick}/>
   );
 };
 
@@ -15,6 +15,7 @@ App.propTypes = {
   countPlaces: PropTypes.number.isRequired,
   cities: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   onCardHover: PropTypes.func.isRequired,
+  onCityClick: PropTypes.func.isRequired,
   onHeaderButtonClick: PropTypes.func.isRequired,
   offers: PropTypes.arrayOf(PropTypes.shape({
     type: PropTypes.string.isRequired,

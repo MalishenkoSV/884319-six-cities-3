@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import CITIES from "../../mock/offers.js";
+import {CITIES} from "../../mock/offers.js";
 
 export const CitiesList = ({onCityClick}) => {
 

@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {CardsList} from "../cards-list/cards-list.jsx";
-
-import {CitiesList} from "../cities-list/cities-list";
+import {CitiesList} from "../cities-list/cities-list.jsx";
 
 const Main = ({countPlaces, offers, cities, onCardHover, onHeaderButtonClick, onCityClick}) => {
   return <main className="page__main page__main--index">

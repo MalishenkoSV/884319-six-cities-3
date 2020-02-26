@@ -50,6 +50,7 @@ const offers = [
 it(`Should App render correctly`, () => {
   const onCardHover = jest.fn();
   const onHeaderButtonClick = jest.fn();
+  const onCityClick = jest.fn();
   const tree = renderer
     .create(<App
       countPlaces={TEST_OFFERS_COUNT}
@@ -57,6 +58,7 @@ it(`Should App render correctly`, () => {
       onHeaderButtonClick={onHeaderButtonClick}
       onCardHover={onCardHover}
       cities={CITIES}
+      onCityClick={onCityClick}
     />)
     .toJSON();
 
