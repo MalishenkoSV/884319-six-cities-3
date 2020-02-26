@@ -1,23 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {CardsList} from "../cards-list/cards-list.jsx";
-import CITIES from "../../mock/offers.js";
 
-const Main = ({countPlaces, offers, onCardHover, onHeaderButtonClick}) => {
+import {CitiesList} from "../cities-list/cities-list";
+
+const Main = ({countPlaces, offers, cities, onCardHover, onHeaderButtonClick, onCityClick}) => {
   return <main className="page__main page__main--index">
     <h1 className="visually-hidden">Cities</h1>
     <div className="tabs">
       <section className="locations container">
         <ul className="locations__list tabs__list">
-          {CITIES.map((CITY, index) => {
-            return (
-              <li key={index} className="locations__item">
-                <a className="locations__item-link tabs__item" href="#">
-                  <span>{CITY + index}</span>
-                </a>
-              </li>
-            );
-          })}
+          {<CitiesList cities={cities} onCityClick={onCityClick}/>}
         </ul>
       </section>
     </div>
@@ -69,6 +62,8 @@ Main.propTypes = {
   })).isRequired,
   onHeaderButtonClick: PropTypes.func.isRequired,
   onCardHover: PropTypes.func.isRequired,
+  onCityClick: PropTypes.func.isRequired,
+  cities: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
 export default Main;

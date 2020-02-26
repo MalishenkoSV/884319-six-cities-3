@@ -3,7 +3,8 @@ import renderer from "react-test-renderer";
 import App from "./app.jsx";
 
 const TEST_OFFERS_COUNT = 312;
-export const TEST_OFFERS = [
+export const CITIES = [`Paris`, `Cologne`, `Brussels`, `Amsterdam`, `Hamburg`, `Dusseldorf`];
+const offers = [
   {
     id: 1,
     type: `apartment`,
@@ -52,9 +53,10 @@ it(`Should App render correctly`, () => {
   const tree = renderer
     .create(<App
       countPlaces={TEST_OFFERS_COUNT}
-      offers={TEST_OFFERS}
+      offers={offers}
       onHeaderButtonClick={onHeaderButtonClick}
       onCardHover={onCardHover}
+      cities={CITIES}
     />)
     .toJSON();
 

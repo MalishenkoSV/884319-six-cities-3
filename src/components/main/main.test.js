@@ -4,6 +4,7 @@ import Main from "./main.jsx";
 
 
 const TEST_OFFERS_COUNT = 312;
+export const CITIES = [`Paris`, `Cologne`, `Brussels`, `Amsterdam`, `Hamburg`, `Dusseldorf`];
 export const TEST_OFFERS = [
   {
     id: 1,
@@ -50,12 +51,15 @@ export const TEST_OFFERS = [
 it(`Should Main render correctly`, () => {
   const onHeaderButtonClick = jest.fn();
   const onCardHover = jest.fn();
+  const onCityClick = jest.fn();
   const tree = renderer
     .create(<Main
       countPlaces={TEST_OFFERS_COUNT}
       offers={TEST_OFFERS}
       onHeaderButtonClick={onHeaderButtonClick}
       onCardHover={onCardHover}
+      onCityClick={onCityClick}
+      cities={CITIES}
     />)
     .toJSON();
 

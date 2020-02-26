@@ -1,4 +1,6 @@
-export default [
+export const CITIES = [`Paris`, `Cologne`, `Brussels`, `Amsterdam`, `Hamburg`, `Dusseldorf`];
+
+export const offers = [
   {
     type: `apartment`,
     price: 120,
@@ -36,4 +38,4 @@ export default [
     photoSrc: `img/apartment-04.jpg`
   }
 ];
-export const CITIES = [`Paris`, `Cologne`, `Brussels`, `Amsterdam`, `Hamburg`, `Dusseldorf`];
+
