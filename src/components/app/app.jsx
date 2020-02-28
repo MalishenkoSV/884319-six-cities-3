@@ -3,17 +3,17 @@ import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
 const App = (props) => {
-  const {countPlaces, offers, cities, onHeaderButtonClick, onCityClick, onCardHover} = props;
+  const {countPlaces, offers, cities, onHeaderButtonClick, onCityClick, onMouseEnter} = props;
 
   return (
-    <Main countPlaces={countPlaces} offers={offers} cities={cities} onCardHover={onCardHover} onHeaderButtonClick={onHeaderButtonClick} onCityClick={onCityClick}/>
+    <Main countPlaces={countPlaces} offers={offers} cities={cities} onMouseEnter={onMouseEnter} onHeaderButtonClick={onHeaderButtonClick} onCityClick={onCityClick}/>
   );
 };
 
 App.propTypes = {
   countPlaces: PropTypes.number.isRequired,
   cities: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  onCardHover: PropTypes.func.isRequired,
+  onMouseEnter: PropTypes.func.isRequired,
   onCityClick: PropTypes.func.isRequired,
   onHeaderButtonClick: PropTypes.func.isRequired,
   offers: PropTypes.arrayOf(PropTypes.shape({

@@ -7,7 +7,7 @@ const TEST_CARD_HOVER_HANDLER = () => {};
 const HEADER_BUTTON_CLICK_HANDLER = () => {};
 ReactDOM.render(
     <App
-      countPlaces={OFFERS_COUNT} offers={offers} onCardHover={TEST_CARD_HOVER_HANDLER} onHeaderButtonClick={HEADER_BUTTON_CLICK_HANDLER}
+      countPlaces={OFFERS_COUNT} offers={offers} onMouseEnter={TEST_CARD_HOVER_HANDLER} onHeaderButtonClick={HEADER_BUTTON_CLICK_HANDLER}
     />,
     document.querySelector(`#root`)
 );

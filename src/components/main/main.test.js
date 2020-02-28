@@ -50,14 +50,14 @@ export const TEST_OFFERS = [
 
 it(`Should Main render correctly`, () => {
   const onHeaderButtonClick = jest.fn();
-  const onCardHover = jest.fn();
+  const onMouseEnter = jest.fn();
   const onCityClick = jest.fn();
   const tree = renderer
     .create(<Main
       countPlaces={TEST_OFFERS_COUNT}
       offers={TEST_OFFERS}
       onHeaderButtonClick={onHeaderButtonClick}
-      onCardHover={onCardHover}
+      onMouseEnter={onMouseEnter}
       onCityClick={onCityClick}
       cities={CITIES}
     />)

@@ -48,7 +48,7 @@ const offers = [
 ];
 
 it(`Should App render correctly`, () => {
-  const onCardHover = jest.fn();
+  const onMouseEnter = jest.fn();
   const onHeaderButtonClick = jest.fn();
   const onCityClick = jest.fn();
   const tree = renderer
@@ -56,7 +56,7 @@ it(`Should App render correctly`, () => {
       countPlaces={TEST_OFFERS_COUNT}
       offers={offers}
       onHeaderButtonClick={onHeaderButtonClick}
-      onCardHover={onCardHover}
+      onMouseEnter={onMouseEnter}
       cities={CITIES}
       onCityClick={onCityClick}
     />)

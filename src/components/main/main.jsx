@@ -60,7 +60,6 @@ Main.propTypes = {
     photoSrc: PropTypes.string.isRequired,
   })).isRequired,
   onHeaderButtonClick: PropTypes.func.isRequired,
-  onCardHover: PropTypes.func.isRequired,
   onCityClick: PropTypes.func.isRequired,
   cities: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
