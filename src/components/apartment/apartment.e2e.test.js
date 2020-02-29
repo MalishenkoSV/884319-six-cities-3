@@ -53,5 +53,5 @@ it(`On hover card must be card's id`, () => {
   card.simulate(`onMouseEnter`);
 
   expect(onMouseEnter.mock.calls[0][0]).toMatchObject(TEST_OFFER.id);
-  expect(onMouseEnter.mock.calls.length).toBe(1);
+  expect(onMouseLeave.mock.calls.length).toBe(1);
 });

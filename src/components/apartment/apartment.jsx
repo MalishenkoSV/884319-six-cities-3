@@ -10,7 +10,7 @@ export const Apartment = ({offer, onMouseEnter, onHeaderButtonClick, onMouseLeav
   return (
     <article className="cities__place-card place-card"
       onMouseLeave={() => {
-        onMouseLeave();
+        onMouseLeave(null);
       }}
       onMouseEnter={() => {
         onMouseEnter(id);
