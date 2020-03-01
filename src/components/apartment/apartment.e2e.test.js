@@ -3,6 +3,9 @@ import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import {Apartment} from "./apartment";
 
+Enzyme.configure({
+  adapter: new Adapter(),
+});
 export const TEST_OFFER = {
   id: 1,
   type: `apartment`,
@@ -13,14 +16,11 @@ export const TEST_OFFER = {
   rating: 4,
   photoSrc: `img/apartment-01.jpg`
 };
-const onMouseLeave = () => {};
-Enzyme.configure({
-  adapter: new Adapter(),
-});
 
 it(`Card should be  clicked`, () => {
   const onMouseEnter = jest.fn();
   const onHeaderButtonClick = jest.fn();
+  const onMouseLeave = jest.fn();
   const placeCard = shallow(
       <Apartment
         offer={TEST_OFFER}
@@ -39,6 +39,7 @@ it(`Card should be  clicked`, () => {
 it(`On hover card must be card's id`, () => {
   const onMouseEnter = jest.fn();
   const onHeaderButtonClick = jest.fn();
+  const onMouseLeave = jest.fn();
   const placeCard = shallow(
       <Apartment
         id={`1`}
@@ -50,8 +51,11 @@ it(`On hover card must be card's id`, () => {
   );
 
   const card = placeCard.find(`.place-card`);
-  card.simulate(`onMouseEnter`);
+  card.simulate(`mouseenter`);
+  expect(onMouseEnter).toHaveBeenCalledWith(TEST_OFFER.id);
 
-  expect(onMouseEnter.mock.calls[0][0]).toMatchObject(TEST_OFFER.id);
+
+  card.simulate(`mouseleave`);
+  expect(onMouseLeave).toHaveBeenCalledTimes(1);
   expect(onMouseLeave.mock.calls.length).toBe(1);
 });
