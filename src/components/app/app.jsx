@@ -6,7 +6,12 @@ const App = (props) => {
   const {countPlaces, offers, cities, onHeaderButtonClick, onCityClick, onMouseEnter} = props;
 
   return (
-    <Main countPlaces={countPlaces} offers={offers} cities={cities} onMouseEnter={onMouseEnter} onHeaderButtonClick={onHeaderButtonClick} onCityClick={onCityClick}/>
+    <Main countPlaces={countPlaces}
+      offers={offers}
+      cities={cities}
+      onMouseEnter={onMouseEnter}
+      onHeaderButtonClick={onHeaderButtonClick}
+      onCityClick={onCityClick}/>
   );
 };
 

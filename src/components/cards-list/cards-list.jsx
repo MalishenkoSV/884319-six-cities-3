@@ -23,7 +23,6 @@ export class CardsList extends PureComponent {
     return offers.map((offer) =>
       <Apartment
         key={offer.id}
-        offers={offers}
         offer={offer}
         onHeaderButtonClick={onHeaderButtonClick}
         onMouseEnter={this.setActiveCard}

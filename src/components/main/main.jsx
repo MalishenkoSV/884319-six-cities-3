@@ -39,7 +39,9 @@ const Main = ({countPlaces, offers, cities, onHeaderButtonClick, onCityClick}) =
               <option className="places__option" value="top-rated">Top rated first</option>
             </select>
           </form>
-          <div className="cities__places-list places__list tabs__content"><CardsList offers={offers} onHeaderButtonClick={onHeaderButtonClick}/></div>
+          <div className="cities__places-list places__list tabs__content">
+            <CardsList offers={offers} onHeaderButtonClick={onHeaderButtonClick} />
+          </div>
         </section>
         <div className="cities__right-section">
           <section className="cities__map map"></section>

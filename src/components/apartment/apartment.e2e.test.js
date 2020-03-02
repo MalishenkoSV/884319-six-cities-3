@@ -42,7 +42,7 @@ it(`On hover card must be card's id`, () => {
   const onMouseLeave = jest.fn();
   const placeCard = shallow(
       <Apartment
-        id={`1`}
+        id={TEST_OFFER.id}
         offer={TEST_OFFER}
         onHeaderButtonClick={onHeaderButtonClick}
         onMouseEnter={onMouseEnter}
