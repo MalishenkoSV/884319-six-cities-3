@@ -2,13 +2,28 @@ import React from "react";
 import renderer from 'react-test-renderer';
 import {Apartment} from "./apartment.jsx";
 
-const TEST_OFFER_TITLE = `Perfect apartment`;
-const TEST_HEADER_CLICK_HANDLER = () => {};
-it(`Should App render correctly`, () => {
+export const TEST_OFFER = {
+  id: 1,
+  type: `apartment`,
+  price: 80,
+  title: `Wood and stone place`,
+  isPremium: true,
+  isFavourite: false,
+  rating: 4,
+  photoSrc: `img/apartment-01.jpg`
+};
+
+
+it(`Should Apartment render correctly`, () => {
+  const onMouseEnter = jest.fn();
+  const onHeaderButtonClick = jest.fn();
+  const onMouseLeave = jest.fn();
   const tree = renderer
     .create(<Apartment
-      offer={TEST_OFFER_TITLE}
-      onHeaderButtonClick={TEST_HEADER_CLICK_HANDLER}
+      offer={TEST_OFFER}
+      onHeaderButtonClick={onHeaderButtonClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     />)
     .toJSON();
 

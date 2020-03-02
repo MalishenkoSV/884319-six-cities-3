@@ -1,11 +1,8 @@
 import React from "react";
-import renderer from "react-test-renderer";
-import Main from "./main.jsx";
+import renderer from 'react-test-renderer';
+import {CardsList} from "./cards-list";
 
-
-const TEST_OFFERS_COUNT = 312;
-export const CITIES = [`Paris`, `Cologne`, `Brussels`, `Amsterdam`, `Hamburg`, `Dusseldorf`];
-export const TEST_OFFERS = [
+export const OFFERS_TEST = [
   {
     id: 1,
     type: `apartment`,
@@ -19,7 +16,7 @@ export const TEST_OFFERS = [
   {
     id: 2,
     type: `room`,
-    price: 20,
+    price: 50,
     title: `Your perfect room`,
     isPremium: false,
     isFavourite: true,
@@ -48,16 +45,13 @@ export const TEST_OFFERS = [
   }
 ];
 
-it(`Should Main render correctly`, () => {
-  const onHeaderButtonClick = jest.fn();
-  const onCityClick = jest.fn();
+
+const HEADER_BUTTON_CLICK_HANDLER = () => {};
+it(`Should CardsList render correctly`, () => {
   const tree = renderer
-    .create(<Main
-      countPlaces={TEST_OFFERS_COUNT}
-      offers={TEST_OFFERS}
-      onHeaderButtonClick={onHeaderButtonClick}
-      onCityClick={onCityClick}
-      cities={CITIES}
+    .create(<CardsList
+      offers={OFFERS_TEST}
+      onHeaderButtonClick={HEADER_BUTTON_CLICK_HANDLER}
     />)
     .toJSON();
 
