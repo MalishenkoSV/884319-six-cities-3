@@ -1,19 +1,59 @@
-import React from "react";
+import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Property from "../property/property.jsx";
+import {offersMock} from "../../mock/offers.js";
 
-const App = (props) => {
-  const {countPlaces, offers, cities, onHeaderButtonClick, onCityClick, onMouseEnter} = props;
+class App extends PureComponent {
+  constructor(props) {
+    super(props);
 
-  return (
-    <Main countPlaces={countPlaces}
-      offers={offers}
-      cities={cities}
-      onMouseEnter={onMouseEnter}
-      onHeaderButtonClick={onHeaderButtonClick}
-      onCityClick={onCityClick}/>
-  );
-};
+    this.onHeaderButtonClick = this.onHeaderButtonClick.bind(this);
+
+    this.state = {
+      value: offersMock[0]
+    };
+  }
+
+  renderApp() {
+    const {offers} = this.props;
+    return (
+      <Main offers={offers}
+        onHeaderButtonClick={this.onHeaderButtonClick}
+        countPlaces={this.props.countPlaces}
+        cities={this.props.cities}
+        onCityClick={this.props.onCityClick}/>
+    );
+  }
+
+  renderProperty() {
+    const offer = this.state.value;
+
+    if (offer !== null) {
+      return (
+        <Property offer={offer} />
+      );
+    }
+    return this.renderApp();
+  }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            {this.renderApp()}
+          </Route>
+          <Route exact path="/dev-offer">
+            {this.renderProperty()}
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    );
+  }
+
+}
 
 App.propTypes = {
   countPlaces: PropTypes.number.isRequired,
