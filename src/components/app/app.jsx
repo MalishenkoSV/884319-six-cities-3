@@ -5,54 +5,62 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Property from "../property/property.jsx";
 import {offersMock} from "../../mock/offers.js";
 
+const onHeaderButtonClick = () => {};
 class App extends PureComponent {
   constructor(props) {
     super(props);
+    this.state = {
+      activeCard: null
+    };
 
     this.onHeaderButtonClick = this.onHeaderButtonClick.bind(this);
+  }
 
-    this.state = {
-      value: offersMock[0]
-    };
+  onHeaderButtonClick(id) {
+    this.setState({
+      activeCard: id
+    });
   }
 
   renderApp() {
-    const {offers} = this.props;
-    return (
-      <Main offers={offers}
-        onHeaderButtonClick={this.onHeaderButtonClick}
-        countPlaces={this.props.countPlaces}
-        cities={this.props.cities}
-        onCityClick={this.props.onCityClick}/>
-    );
-  }
+    const {countPlaces, onCityClick, cities} = this.props;
+    const {activeCard} = this.state;
 
-  renderProperty() {
-    const offer = this.state.value;
-
-    if (offer !== null) {
+    if (activeCard < 0) {
       return (
-        <Property offer={offer} />
+        <Main
+          countPlaces={countPlaces}
+          offers={offersMock}
+          onHeaderButtonClick={onHeaderButtonClick}
+          onCityClick={onCityClick}
+          cities={cities}
+        />
       );
     }
-    return this.renderApp();
+    if (activeCard >= 0) {
+      return (
+        <Property offer={offersMock[activeCard - 1]} />
+      );
+    }
+
+    return null;
   }
 
   render() {
+    const offer = offersMock[0];
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
             {this.renderApp()}
           </Route>
-          <Route exact path="/dev-offer">
-            {this.renderProperty()}
+          <Route exact path="/offer">
+            <Property offer={offer}/>
           </Route>
         </Switch>
       </BrowserRouter>
     );
   }
-
 }
 
 App.propTypes = {
