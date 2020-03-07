@@ -6,6 +6,7 @@ import Property from "../property/property.jsx";
 import {offersMock} from "../../mock/offers.js";
 
 const onHeaderButtonClick = () => {};
+const HEADER_HOVER_CARD_HANDLER = () => {};
 class App extends PureComponent {
   constructor(props) {
     super(props);
@@ -34,6 +35,7 @@ class App extends PureComponent {
           onHeaderButtonClick={onHeaderButtonClick}
           onCityClick={onCityClick}
           cities={cities}
+          onMouseEnter={HEADER_HOVER_CARD_HANDLER}
         />
       );
     }
