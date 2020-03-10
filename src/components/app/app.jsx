@@ -2,7 +2,7 @@ import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import Property from "../property/property.jsx";
+import {Property} from "../property/property.jsx";
 import {offersMock} from "../../mock/offers.js";
 
 const onHeaderButtonClick = () => {};
